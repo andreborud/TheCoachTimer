@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/leaderboard"
+        android:icon="@drawable/ic_format_list_numbered_black_24dp"
+        android:title="Leaderboard"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/files"
+        android:icon="@drawable/ic_insert_drive_file_black_24dp"
+        android:title="Files"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/morePlayers"
+        android:icon="@drawable/ic_insert_drive_file_black_24dp"
+        android:title="Download players from server"
+        app:showAsAction="never" />
+
+</menu>

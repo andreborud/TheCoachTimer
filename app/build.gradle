@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.andreborud.thecoachtimer"
+        minSdkVersion 17
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // very usefull library to get xml views into activities much easier
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    // sweet coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+
+    // this library make sending parcelization of objects easy to send with intents
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0"
+
+    // some android basics
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    // easy networking
+    implementation("com.squareup.okhttp3:okhttp:4.7.1")
+
+    // easy json serialization and deserialization
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // a breeze to load photos from a url
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    // Overly complicated chart library for this purpose, but it works
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

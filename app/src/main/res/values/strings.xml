@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">The Coach Timer</string>
+
+    <string name="averageSpeed"><![CDATA[<small><strong>Average speed</strong></small><br><big>%1$s m/s</big>]]></string>
+    <string name="averageTime"><![CDATA[<small><strong>Average Lap Time</strong></small><br><big>%1$s</big>]]></string>
+    <string name="timeVariance"><![CDATA[<small><strong>Time variation</strong></small><br><big>%1$s</big>]]></string>
+    <string name="cadence"><![CDATA[<small><strong>Cadence</strong></small><br><big>%1$s laps/min</big>]]></string>
+</resources>

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/exportCsv"
+        android:icon="@drawable/ic_file_download_black_24dp"
+        android:title="Export CSV"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/explosiveness"
+        android:icon="@drawable/ic_sort_black_24dp"
+        android:title="Sort by Explosiveness"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/endurance"
+        android:icon="@drawable/ic_sort_black_24dp"
+        android:title="Sort by Endurance"
+        app:showAsAction="never" />
+
+</menu>
